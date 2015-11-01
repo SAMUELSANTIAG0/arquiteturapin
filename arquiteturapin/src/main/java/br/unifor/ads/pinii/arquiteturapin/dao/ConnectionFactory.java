@@ -25,13 +25,13 @@ public class ConnectionFactory {
 	private ConnectionFactory() {
 		HikariConfig config = new HikariConfig();
 		//Não padrao
-		config.setJdbcUrl("jdbc:postgresql://localhost:5432/arquiteturapin");
+		config.setJdbcUrl("jdbc:mysql://localhost:3306/arquiteturapin");
 		// OR padrao
-//		config.setDataSourceClassName("org.postgresql.ds.PGSimpleDataSource");
-//		config.addDataSourceProperty("databaseName", "arquitetura");
+//		config.setDataSourceClassName("com.mysql.jdbc.Driver");
+//		config.addDataSourceProperty("databaseName", "arquiteturapin");
 		
-		config.setUsername("postgres");
-		config.setPassword("unifor");
+		config.setUsername("root");
+		config.setPassword("101191");
 		config.setMinimumIdle(2);
 		config.setMaximumPoolSize(20); //default 10
 		config.setConnectionTestQuery("SELECT 1 ");
